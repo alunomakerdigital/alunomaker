@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DISCIPLINA OK </title>
+</head>
+<body>
+    <h1>aqui estão as disciplinas </h1>
+    <h2><a href="{% url 'index' %}"> Voltar para INDEX</a></h2>
+    <table>
+            <thead>
+                <tr>
+                    <th>Disciplinas</th>
+                    <th>Ano Aplicado</th>
+                    <th>Conteúdo</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="{% url 'index' %}">{{ disciplina.materia }}</a></td>
+                    <td>{{ disciplina.ano }}</td>
+                    <td>{{ disciplina.conteudo }}</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+</body>
+</html>

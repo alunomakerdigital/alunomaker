@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>AlunoMakerDigital</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <center>
+    <h1>App Aluno Maker Digital</h1>
+
+    <img src="{% static 'images/robotika_vida_micro.png' %}"/>
+
+    <h2>{{curso}}</h2>
+
+    <p> {{OUTRA}}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Robôs</th>
+                <th>Etapa de Ensino</th>
+                <th>Conteúdos Matemática</th>
+                <th>Conteúdos Linguagens</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for portfolio in portfolios %}
+            <tr>
+                <td><a href="{% url 'portfolio' portfolio.id %}">{{ portfolio.nomePortfolio }}</a></td>
+                <td>{{ portfolio.etapasEnsino }}</td>
+                <td>{{ portfolio.tematicaMat }}</td>
+                <td>{{ portfolio.tematicaLing }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+    <button onclick="teste();">Home page </button>
+    </center>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

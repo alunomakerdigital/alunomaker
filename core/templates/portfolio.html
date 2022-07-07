@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AlunoMakerDigital</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <center>
+        <table>
+            <thead>
+                <tr>
+                    <th>Robôs :</th>
+                    <th>{{portfolio.nomePortfolio}}</th>
+                </tr>
+                <tr>
+                    <th>Etapas de Ensino :</th>
+                    <th>{{portfolio.etapasEnsino}}</th>
+                </tr>
+                <tr>
+                    <th>Conteúdos Matemática :</th>
+                    <th><a href="{% url 'portfolio' portfolio.id %}"> {{portfolio.tematicaMat}}</a></th>
+                </tr>
+                <tr>
+                    <th>Conteúdos Linguagens :</th>
+                    <th>{{portfolio.tematicaLing}}</th>
+                </tr>
+                <tr>
+                    <th>Plataforma utilizada :</th>
+                    <th>{{portfolio.plataformaPrototipo}}</th>
+                </tr>
+                <tr>
+                    <th>Circuito do projeto :</th>
+                    <th>{{portfolio.circuitoPrototipo}}</th>
+                </tr>
+                <tr>
+                    <th>Código fonte do projeto :</th>
+                    <th>{{portfolio.sourceCodePrototipos}}</th>
+                </tr>
+                <tr>
+                    <th>Materiais necessários :</th>
+                    <th>{{portfolio.materiaisPrototipos}}</th>
+                </tr>
+                <tr>
+                    <th>Site de referência :</th>
+                    <th>{{portfolio.siteReferencia}}</th>
+                </tr>
+                <tr>
+                    <th>Canal Audio Visual tutorial</th>
+                    <th>{{portfolio.canalAudioVisual}}</th>
+                </tr>
+
+
+            </thead>
+
+        </table>
+
+
+    <h2><a href="{% url 'index' %}"> Voltar para INDEX</a></h2>
+    </center>
+</body>
+</html>
